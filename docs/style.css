@@ -1,0 +1,292 @@
+/* reset and base options */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, input, textarea, select, button {
+  display: block; }
+:focus {
+  outline: 0; }
+body {
+  line-height: 1;
+  position: relative;
+  transition: all 0.5s ease 0.1s; }
+ol, ul {
+  list-style: none; }
+blockquote, q {
+  quotes: none; }
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+q:before, q:after {
+  content: '';
+  content: none; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+a {
+  color: #fff;
+  outline: none;
+  text-decoration: none; }
+  a:hover {
+    color: #fff; }
+html {
+  height: 100%;
+  min-height: 100%
+  min-width: 300px;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased; 
+  font: 400 1rem/1.2 'Arial', sans-serif;
+  height: 2000px;
+  background: #ccc;
+}
+#wrapper {
+  height: auto;
+  min-height: 2000px;
+  position: relative;
+}
+/* reset and base options */
+
+
+
+
+.datapicker {
+  background: rgba(0,0,0,.3);
+  height: 100%;
+  min-height: 100%;
+  text-align: center;
+}
+.datapicker .calendar {
+  background: #fff;
+  border-radius: 7px;
+  display: inline-block;
+  height: auto;
+  margin-top: 130px;
+  max-width: 512px;
+  position: relative;
+  text-align: center;
+}
+.datapicker .btn-close {
+  color: rgba(0,0,0,.7);
+  cursor: pointer;
+  display: block;
+  font-size: 2rem;
+  font-weight: 100;
+  height: 20px;
+  line-height: 0.5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+}
+.datapicker .btn-close:hover::after, .datapicker .btn-close:hover::before {
+  background: rgba(0,0,0,.9);
+}
+.datapicker .btn-close:before,
+.datapicker .btn-close:after {
+  background: rgba(0,0,0,.7);
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 23px;
+}
+.datapicker .btn-close:before {
+  transform: rotate(45deg);
+}
+.datapicker .btn-close:after {
+  transform: rotate(-45deg);
+}
+.datapicker .title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 35px 0;
+  padding: 0 60px;
+  position: relative;
+  text-align: left;
+}
+.datapicker .title:after {
+  bottom: -55px;
+  color: #d9d9d9;
+  content: '2018';
+  font: 400 0.9rem/1.2 'Arial', sans-serif;
+  position: absolute;
+  right: 90px;
+}
+
+
+/* datapicker main calendar container */
+.datapicker .container {
+  display: inline-block;
+  height: 300px;
+  max-width: 375px;
+  min-height: 900px;
+  overflow-y: scroll;
+}
+.datapicker .month {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.datapicker .month:last-child {
+  margin-bottom: 0;
+}
+.datapicker .month .caption {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.datapicker .calendar thead th, .datapicker .calendar td {
+  padding: 12px 14px;
+}
+.datapicker .calendar thead th {
+  color: #333;
+  font: 100 0.8rem/1.2 'Arial', sans-serif;
+}
+.datapicker .calendar tbody th {
+  vertical-align: middle;
+  width: 45px;
+}
+.datapicker .calendar td {
+  background-color: #f9f9f9;
+  color: #666;
+}
+.datapicker .calendar td.nearby {
+  background-color: #fcfcfc;
+  color: #bbb;
+}
+.datapicker .calendar td.selected {
+  background-color: #d1f7c5;
+  position: relative !important;
+}
+.datapicker .calendar .input {
+  display: none;
+}
+.datapicker .calendar .checkbox {
+  border: 1px solid #999;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px 1px #d1d1d1 inset;
+  display: block;
+  height: 12px;
+  margin: 0 auto;
+  position: relative;
+  width: 12px;
+}
+.datapicker .calendar .input:checked + .checkbox {
+  background-color: #009688;
+  border: none;
+  box-shadow: none;
+  height: 18px;
+  width: 18px;
+}
+.datapicker .calendar .checkbox:before, 
+.datapicker .calendar .checkbox:after {
+  background-color: #fff;
+  content: "";
+  display: none;
+  left: 6px;
+  position: absolute;
+  top: 12px;
+  transform-origin: 0 0;
+}
+.datapicker .calendar .checkbox:before {
+  height: 2px;
+  transform: rotate(-135deg);
+  width: 5px;
+}
+.datapicker .calendar .checkbox:after {
+  height: 2px;
+  transform: rotate(-45deg);
+  width: 11px;
+}
+.datapicker .calendar .input:checked + .checkbox:before,
+.datapicker .calendar .input:checked + .checkbox:after {
+  display: block;
+}
+/* datapicker main calendar container */
+
+
+/* datapicker controls - switcher, submit cutton */
+.datapicker .controls {
+  margin: 30px auto 50px auto;
+  max-width: 375px;
+}
+.datapicker .controls .switcher {
+  margin-bottom: 50px;
+  text-align: right;
+}
+.datapicker .controls .submit {
+  background-color: #dc8123;
+  border-radius: 30px;
+  box-shadow: 0 3px 5px 0 rgba(0,0,0,.3);
+  box-sizing: border-box;
+  display: inline-block;
+  font: 600 1.2rem/1.4 'Arial', sans-serif;
+  letter-spacing: 1px;
+  padding: 15px 65px;
+}
+.datapicker .switcher .trigger {
+  background-color: #c6c5c5;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  position: relative;
+  vertical-align: middle;
+  width: 35px;
+}
+.datapicker .switcher .trigger:after {
+  left: -3px;
+  top: -3px;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.3);
+  content: '';
+  display: block;
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+.datapicker #weekends:checked ~ .trigger {
+  background-color: #dc8123;
+}
+.datapicker #weekends:checked ~ .trigger:after {
+  transform: translateX(20px);
+}
+.datapicker .switcher .caption {
+  color: #3c3c3c;
+  display: inline-block;
+  font: 300 1rem/1.2 'Arial', sans-serif;
+  letter-spacing: 1px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.datapicker .switcher input {
+  display: none;
+}
+/* datapicker controls - switcher, submit cutton */
+
+
+/* custom scrollbar */
+.datapicker ::-webkit-scrollbar {
+  width: 8px;
+}
+.datapicker ::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.datapicker ::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 9px;
+}
+/* custom scrollbar */
